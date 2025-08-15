@@ -1,2 +1,2 @@
-# Discord Bot
-Discord Bot para o servidor da Alfheim no Discord.
+# :gem: Servant
+Discord Bot para o servidor da [Alfheim](https://discord.gg/alfh).
