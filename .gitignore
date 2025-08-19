@@ -147,3 +147,7 @@ devenv.local.nix
 
 # pre-commit
 .pre-commit-config.yaml
+
+# Drizzle
+drizzle.config.js
+drizzle.config.js.map

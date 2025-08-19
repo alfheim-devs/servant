@@ -26,16 +26,19 @@
     "@discordx/utilities": "^7.0.5",
     "@eslint/js": "^9.33.0",
     "@types/node": "^24.3.0",
+    "@types/pg": "^8.15.5",
     "@typescript-eslint/eslint-plugin": "^8.40.0",
     "@typescript-eslint/parser": "^8.40.0",
     "concurrently": "^9.2.0",
     "dotenv": "^17.2.1",
+    "drizzle-kit": "^0.31.4",
     "eslint": "^9.33.0",
     "eslint-config-prettier": "^10.1.8",
     "prettier": "^3.6.2",
     "reflect-metadata": "^0.2.2",
     "rimraf": "^6.0.1",
     "ts-node": "^10.9.2",
+    "tsx": "^4.20.4",
     "tsyringe": "^4.10.0",
     "typescript": "^5.9.2",
     "typescript-eslint": "^8.40.0"
@@ -43,6 +46,8 @@
   "dependencies": {
     "@discordx/importer": "^1.3.3",
     "discord.js": "^14.21.0",
-    "discordx": "^11.12.5"
+    "discordx": "^11.12.5",
+    "drizzle-orm": "^0.44.4",
+    "pg": "^8.16.3"
   }
 }

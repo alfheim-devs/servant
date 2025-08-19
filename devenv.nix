@@ -12,6 +12,8 @@
     pnpm.enable = true;
   };
 
+  services.postgres.enable = true;
+  
   git-hooks.hooks = {
     eslint.enable = true;
     prettier.enable = true;
