@@ -14,9 +14,7 @@
     "build:start": "npm run build && npm run start",
     "build:clean": "rimraf dist/",
     "build:compile": "tsc",
-    "watch": "concurrently \"npm run watch:compile\" \"npm run watch:start\"",
-    "watch:compile": "tsc --watch",
-    "watch:start": "node --watch dist/"
+    "watch": "tsx --watch ./src/"
   },
   "keywords": [],
   "author": "",
