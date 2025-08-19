@@ -11,4 +11,9 @@
     npm.enable = true;
     pnpm.enable = true;
   };
+
+  git-hooks.hooks = {
+    eslint.enable = true;
+    prettier.enable = true;
+  };
 }
