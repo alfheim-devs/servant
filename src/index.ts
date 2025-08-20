@@ -1,3 +1,4 @@
+/* Ester Egg by Rahvax - fuck your push if dont see this xD */
 import "reflect-metadata";
 import "dotenv/config";
 import { container } from "tsyringe";
