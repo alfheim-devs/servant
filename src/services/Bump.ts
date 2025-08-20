@@ -1,6 +1,6 @@
 import { inject, singleton } from "tsyringe";
 import { Database } from "./Database.js";
-import { Embed, Message } from "discord.js";
+import { Embed, Message, TextChannel } from "discord.js";
 
 const DISBOARD_BOT_ID = process.env.DISBOARD_BOT_ID || "";
 
@@ -26,12 +26,15 @@ export class Bump {
         if (this.bumpHasSucceeded(message.author.id, message.embeds[0])) {
             const userId = message.interactionMetadata?.user.id || "";
             const user = await this.database.getUserOrCreateOne(userId);
-            console.debug(user);
+            const channel = message.channel;
 
-            if (user) {
-                void this.database.incrementUserBump(userId, user?.bumps + 1);
+            if (user && channel instanceof TextChannel) {
+                const bumps = user?.bumps + 1;
+                void this.database.incrementUserBump(userId, bumps);
                 await message.react("👍");
-                /// TODO(bump): enviar mensagem incrementando bump e mostrando bumps totais do usuário
+                await channel.send(
+                    `<@${user.id}>, você acabou de dar bump! Agora você tem ${bumps} bumps!`,
+                );
             }
         }
     }
