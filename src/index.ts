@@ -4,7 +4,7 @@ import { container } from "tsyringe";
 import { Client, DIService, tsyringeDependencyRegistryEngine } from "discordx";
 import { importx, dirname } from "@discordx/importer";
 import { GatewayIntentBits } from "discord.js";
-import { drizzle } from "drizzle-orm/node-postgres";
+import { Database } from "./services/Database.js";
 
 DIService.engine = tsyringeDependencyRegistryEngine.setInjector(container);
 
@@ -12,8 +12,9 @@ const DISCORD_GUILD_ID = process.env.DISCORD_GUILD_ID;
 const DISCORD_TOKEN = process.env.DISCORD_TOKEN || "";
 const DATABASE_URL = process.env.DATABASE_URL || "";
 
-const db = drizzle(DATABASE_URL);
-container.registerInstance("database", db);
+container.register<Database>(Database, {
+    useValue: new Database(DATABASE_URL),
+});
 
 const client = new Client({
     intents: [
