@@ -4,7 +4,7 @@ import { Embed, Message, TextChannel } from "discord.js";
 
 const DISBOARD_BOT_ID = process.env.DISBOARD_BOT_ID || "";
 const BUMP_ROLE_ID = process.env.BUMP_ROLE_ID || "";
-const TWO_HOURS = 60 * 60 * 1000;
+const TWO_HOURS = 120 * 60 * 1000;
 
 @singleton()
 export class Bump {
