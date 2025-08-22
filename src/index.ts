@@ -15,11 +15,11 @@ import { drizzle } from "drizzle-orm/node-postgres";
 
 DIService.engine = tsyringeDependencyRegistryEngine.setInjector(container);
 
-const GuildID = process.env.GuildID;
-const Token = process.env.Token || "";
-const dbURL = process.env.dbURL || "";
+const GUILD_ID = process.env.GUILD_ID;
+const BOT_TOKEN = process.env.BOT_TOKEN || "";
+const DATABASE_URL = process.env.DATABASE_URL || "";
 
-const db = drizzle(dbURL);
+const db = drizzle(DATABASE_URL);
 container.registerInstance("database", db);
 
 const client = new Client({
@@ -29,12 +29,12 @@ const client = new Client({
         GatewayIntentBits.MessageContent,
     ],
     silent: false,
-    botGuilds: GuildID ? [GuildID] : [],
+    botGuilds: GUILD_ID ? [GUILD_ID] : [],
 });
 
 async function main() {
     await importx(`${dirname(import.meta.url)}/{events,commands}/**/*.{ts,js}`);
-    await client.login(Token);
+    await client.login(BOT_TOKEN);
 }
 
 main();
