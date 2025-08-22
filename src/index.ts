@@ -1,9 +1,4 @@
 /*
-  @Servant - A simple Alfheim moderation and resource bot.
-  Our focus is only to provide resources for our personal use, and this is reflected in the code.
-
-  Acess our server: /qTgfcN6ct7
-  By: Alfheim Team 
 */
 import "reflect-metadata";
 import "dotenv/config";
