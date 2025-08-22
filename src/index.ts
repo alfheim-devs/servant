@@ -1,4 +1,10 @@
-/* Ester Egg by Rahvax - fuck your push if dont see this xD */
+/*
+  @Servant - A simple Alfheim moderation and resource bot.
+  Our focus is only to provide resources for our personal use, and this is reflected in the code.
+
+  Acess our server: /qTgfcN6ct7
+  By: Alfheim Team 
+*/
 import "reflect-metadata";
 import "dotenv/config";
 import { container } from "tsyringe";
@@ -9,11 +15,11 @@ import { drizzle } from "drizzle-orm/node-postgres";
 
 DIService.engine = tsyringeDependencyRegistryEngine.setInjector(container);
 
-const DISCORD_GUILD_ID = process.env.DISCORD_GUILD_ID;
-const DISCORD_TOKEN = process.env.DISCORD_TOKEN || "";
-const DATABASE_URL = process.env.DATABASE_URL || "";
+const GuildID = process.env.GuildID;
+const Token = process.env.Token || "";
+const dbURL = process.env.dbURL || "";
 
-const db = drizzle(DATABASE_URL);
+const db = drizzle(dbURL);
 container.registerInstance("database", db);
 
 const client = new Client({
@@ -23,12 +29,12 @@ const client = new Client({
         GatewayIntentBits.MessageContent,
     ],
     silent: false,
-    botGuilds: DISCORD_GUILD_ID ? [DISCORD_GUILD_ID] : [],
+    botGuilds: GuildID ? [GuildID] : [],
 });
 
 async function main() {
     await importx(`${dirname(import.meta.url)}/{events,commands}/**/*.{ts,js}`);
-    await client.login(DISCORD_TOKEN);
+    await client.login(Token);
 }
 
 main();

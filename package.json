@@ -1,8 +1,8 @@
 {
   "name": "servant",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
-  "description": "",
+  "description": "Just a simple moderation bot - Alfheim Server",
   "main": "index.js",
   "scripts": {
     "lint": "eslint \"src/**/*.ts\"",
@@ -18,8 +18,8 @@
     "watch:compile": "tsc --watch",
     "watch:start": "node --watch dist/"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["bot", "Moderation", "Discord"],
+  "author": "Alfheim Bot",
   "license": "Apache-2.0",
   "packageManager": "pnpm@10.14.0",
   "devDependencies": {
