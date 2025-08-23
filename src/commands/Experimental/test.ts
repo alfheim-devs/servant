@@ -1,4 +1,4 @@
-import { Discord, Guild, Slash } from "discordx";
+import { Discord, Slash } from "discordx";
 import { Category } from "@discordx/utilities";
 import { CommandInteraction } from "discord.js";
 

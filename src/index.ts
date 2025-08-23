@@ -1,4 +1,3 @@
-
 /**
  * Servant, um bom simples de moderação
  * Nosso foco é entregar recursos e comandos personalizados, e isso reflete ao nosso código.
