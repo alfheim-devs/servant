@@ -13,7 +13,7 @@ export default class ShutdownCommand {
         description: "Desligar bot pelo cliente {owner}",
     })
     async shutdown(interaction: CommandInteraction): Promise<void> {
-        if (interaction.member?.user.id != "314858301726785546") return;
+        if (interaction.member?.user.id != process.env.OWNER_ID) return;
         await interaction.reply({ content: `Encerrando o bot.` });
         await interaction.client.destroy().catch((err) => console.log(err));
     }
