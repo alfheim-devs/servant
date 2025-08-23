@@ -2,7 +2,7 @@
   "name": "servant",
   "version": "1.0.1",
   "type": "module",
-  "description": "Just a simple moderation bot - Alfheim Server",
+  "description": "Bot de moderação simples no Discord",
   "main": "index.js",
   "scripts": {
     "lint": "eslint \"src/**/*.ts\"",
