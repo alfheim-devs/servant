@@ -4,14 +4,14 @@ import { CommandInteraction } from "discord.js";
 
 @Discord()
 @Category("Experimental")
-export default class TestCommand {
+export default class PingCommand {
     @Slash({
-        name: "test",
-        description: "Just a test command",
+        name: "ping",
+        description: "Apenas um teste rápido da interação",
     })
-    async test(interaction: CommandInteraction): Promise<void> {
+    async ping(interaction: CommandInteraction): Promise<void> {
         await interaction.reply({
-            content: `This is a test, ${interaction.member}!`,
+            content: `Pong!`,
         });
     }
 }
