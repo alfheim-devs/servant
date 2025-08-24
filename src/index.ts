@@ -15,9 +15,10 @@ import { Database } from "./services/Database.js";
 
 DIService.engine = tsyringeDependencyRegistryEngine.setInjector(container);
 
+const BOT_ID = process.env.BOT_ID!;
 const GUILD_ID = process.env.GUILD_ID;
-const BOT_TOKEN = process.env.BOT_TOKEN || "";
-const DATABASE_URL = process.env.DATABASE_URL || "";
+const BOT_TOKEN = process.env.BOT_TOKEN!;
+const DATABASE_URL = process.env.DATABASE_URL!;
 
 container.register<Database>(Database, {
     useValue: new Database(DATABASE_URL),
@@ -29,6 +30,7 @@ const client = new Client({
         GatewayIntentBits.GuildMessages,
         GatewayIntentBits.MessageContent,
     ],
+    botId: BOT_ID,
     silent: false,
     botGuilds: GUILD_ID ? [GUILD_ID] : [],
 });

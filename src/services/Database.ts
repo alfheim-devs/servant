@@ -2,7 +2,7 @@ import { drizzle, NodePgDatabase } from "drizzle-orm/node-postgres";
 import { singleton } from "tsyringe";
 import { Pool } from "pg";
 import { usersTable } from "../db/schema.js";
-import { eq } from "drizzle-orm";
+import { desc, eq } from "drizzle-orm";
 
 export type DrizzleDatabase = NodePgDatabase<Record<string, never>> & {
     $client: Pool;
@@ -58,10 +58,18 @@ export class Database {
     }
 
     async incrementUserBump(userId: string, newValue: number) {
-        const result = await this.drizzle
+        await this.drizzle
             .update(usersTable)
             .set({ bumps: newValue })
             .where(eq(usersTable.id, userId));
-        console.debug(result);
+    }
+
+    async getTop10BumpUsers(): Promise<User[]> {
+        const result = await this.drizzle
+            .select()
+            .from(usersTable)
+            .orderBy(desc(usersTable.bumps))
+            .limit(10);
+        return result;
     }
 }
