@@ -11,16 +11,18 @@ import { container } from "tsyringe";
 import { Client, DIService, tsyringeDependencyRegistryEngine } from "discordx";
 import { importx, dirname } from "@discordx/importer";
 import { GatewayIntentBits } from "discord.js";
-import { drizzle } from "drizzle-orm/node-postgres";
+import { Database } from "./services/Database.js";
 
 DIService.engine = tsyringeDependencyRegistryEngine.setInjector(container);
 
+const BOT_ID = process.env.BOT_ID!;
 const GUILD_ID = process.env.GUILD_ID;
-const BOT_TOKEN = process.env.BOT_TOKEN || "";
-const DATABASE_URL = process.env.DATABASE_URL || "";
+const BOT_TOKEN = process.env.BOT_TOKEN!;
+const DATABASE_URL = process.env.DATABASE_URL!;
 
-const db = drizzle(DATABASE_URL);
-container.registerInstance("database", db);
+container.register<Database>(Database, {
+    useValue: new Database(DATABASE_URL),
+});
 
 const client = new Client({
     intents: [
@@ -28,6 +30,7 @@ const client = new Client({
         GatewayIntentBits.GuildMessages,
         GatewayIntentBits.MessageContent,
     ],
+    botId: BOT_ID,
     silent: false,
     botGuilds: GUILD_ID ? [GUILD_ID] : [],
 });

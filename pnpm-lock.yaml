@@ -11,11 +11,11 @@ importers:
         specifier: ^1.3.3
         version: 1.3.3
       discord.js:
-        specifier: ^14.21.0
-        version: 14.21.0
+        specifier: ^14.22.1
+        version: 14.22.1
       discordx:
-        specifier: ^11.12.5
-        version: 11.12.5(discord.js@14.21.0)
+        specifier: ^11.12.6
+        version: 11.12.6(discord.js@14.22.1)
       drizzle-orm:
         specifier: ^0.44.4
         version: 0.44.4(@types/pg@8.15.5)(pg@8.16.3)
@@ -25,10 +25,10 @@ importers:
     devDependencies:
       "@discordx/utilities":
         specifier: ^7.0.5
-        version: 7.0.5(discord.js@14.21.0)(discordx@11.12.5(discord.js@14.21.0))
+        version: 7.0.5(discord.js@14.22.1)(discordx@11.12.6(discord.js@14.22.1))
       "@eslint/js":
-        specifier: ^9.33.0
-        version: 9.33.0
+        specifier: ^9.34.0
+        version: 9.34.0
       "@types/node":
         specifier: ^24.3.0
         version: 24.3.0
@@ -37,10 +37,10 @@ importers:
         version: 8.15.5
       "@typescript-eslint/eslint-plugin":
         specifier: ^8.40.0
-        version: 8.40.0(@typescript-eslint/parser@8.40.0(eslint@9.33.0)(typescript@5.9.2))(eslint@9.33.0)(typescript@5.9.2)
+        version: 8.40.0(@typescript-eslint/parser@8.40.0(eslint@9.34.0)(typescript@5.9.2))(eslint@9.34.0)(typescript@5.9.2)
       "@typescript-eslint/parser":
         specifier: ^8.40.0
-        version: 8.40.0(eslint@9.33.0)(typescript@5.9.2)
+        version: 8.40.0(eslint@9.34.0)(typescript@5.9.2)
       concurrently:
         specifier: ^9.2.0
         version: 9.2.0
@@ -51,11 +51,11 @@ importers:
         specifier: ^0.31.4
         version: 0.31.4
       eslint:
-        specifier: ^9.33.0
-        version: 9.33.0
+        specifier: ^9.34.0
+        version: 9.34.0
       eslint-config-prettier:
         specifier: ^10.1.8
-        version: 10.1.8(eslint@9.33.0)
+        version: 10.1.8(eslint@9.34.0)
       prettier:
         specifier: ^3.6.2
         version: 3.6.2
@@ -69,8 +69,8 @@ importers:
         specifier: ^10.9.2
         version: 10.9.2(@types/node@24.3.0)(typescript@5.9.2)
       tsx:
-        specifier: ^4.20.4
-        version: 4.20.4
+        specifier: ^4.20.5
+        version: 4.20.5
       tsyringe:
         specifier: ^4.10.0
         version: 4.10.0
@@ -79,7 +79,7 @@ importers:
         version: 5.9.2
       typescript-eslint:
         specifier: ^8.40.0
-        version: 8.40.0(eslint@9.33.0)(typescript@5.9.2)
+        version: 8.40.0(eslint@9.34.0)(typescript@5.9.2)
 
 packages:
   "@cspotcode/source-map-support@0.8.1":
@@ -117,10 +117,10 @@ packages:
       }
     engines: { node: ">=16.11.0" }
 
-  "@discordjs/rest@2.5.1":
+  "@discordjs/rest@2.6.0":
     resolution:
       {
-        integrity: sha512-Tg9840IneBcbrAjcGaQzHUJWFNq1MMWZjTdjJ0WS/89IffaNKc++iOvffucPxQTF/gviO9+9r8kEPea1X5J2Dw==,
+        integrity: sha512-RDYrhmpB7mTvmCKcpj+pc5k7POKszS4E2O9TYc+U+Y4iaCP+r910QdO43qmpOja8LRr1RJ0b3U+CqVsnPqzf4w==,
       }
     engines: { node: ">=18" }
 
@@ -664,10 +664,10 @@ packages:
       }
     engines: { node: ^18.18.0 || ^20.9.0 || >=21.1.0 }
 
-  "@eslint/js@9.33.0":
+  "@eslint/js@9.34.0":
     resolution:
       {
-        integrity: sha512-5K1/mKhWaMfreBGJTwval43JJmkip0RmM+3+IuqupeSKNC/Th2Kc7ucaq5ovTSra/OOKB9c58CGSz3QMVbWt0A==,
+        integrity: sha512-EoyvqQnBNsV1CWaEJ559rxXL4c8V92gxirbawSmVUOWXlsRxxQXl6LmCpdUblgxgSkDIqKnhzba2SjRTI/A5Rw==,
       }
     engines: { node: ^18.18.0 || ^20.9.0 || >=21.1.0 }
 
@@ -1144,23 +1144,23 @@ packages:
       }
     engines: { node: ">=0.3.1" }
 
-  discord-api-types@0.38.20:
+  discord-api-types@0.38.21:
     resolution:
       {
-        integrity: sha512-wJSmFFi8eoFL/jIosUQLoXeCv7YK+l7joKmFCsnkx7HWSFt5xScNQdhvILLxC0oU6J5bK0ppR7GZ1d4NJScSNQ==,
+        integrity: sha512-E6KtXUNjZVIYP1GMjmeRdAC1xRql9xtSahRwJYpP74/hJ6Q2i2oTp6ZbFG/FUN0WqtdW2igHDsJyF2u9hV8pHQ==,
       }
 
-  discord.js@14.21.0:
+  discord.js@14.22.1:
     resolution:
       {
-        integrity: sha512-U5w41cEmcnSfwKYlLv5RJjB8Joa+QJyRwIJz5i/eg+v2Qvv6EYpCRhN9I2Rlf0900LuqSDg8edakUATrDZQncQ==,
+        integrity: sha512-3k+Kisd/v570Jr68A1kNs7qVhNehDwDJAPe4DZ2Syt+/zobf9zEcuYFvsfIaAOgCa0BiHMfOOKQY4eYINl0z7w==,
       }
     engines: { node: ">=18" }
 
-  discordx@11.12.5:
+  discordx@11.12.6:
     resolution:
       {
-        integrity: sha512-9JN6F+7ZewzD9E7NZjBVnVJ2oj9XaxEE1cGis2AiA9VLlMNs8+rvRnQg9It012WuppFNNvk8GNyUM6MMu7ZSWA==,
+        integrity: sha512-6VtxJ3Ys4DC/nYpf4U+jGtxhEOmTeDFKsxVxKp4GxBbI/2rLmIejqzNDbgv5ZZvUkZ2yOYklomVwzTPw+ISrTw==,
       }
     engines: { node: ">=16.0.0", npm: ">=7.0.0" }
     peerDependencies:
@@ -1361,10 +1361,10 @@ packages:
       }
     engines: { node: ^18.18.0 || ^20.9.0 || >=21.1.0 }
 
-  eslint@9.33.0:
+  eslint@9.34.0:
     resolution:
       {
-        integrity: sha512-TS9bTNIryDzStCpJN93aC5VRSW3uTx9sClUn4B87pwiCaJh220otoI0X8mJKr+VcPtniMdN8GKjlwgWGUv5ZKA==,
+        integrity: sha512-RNCHRX5EwdrESy3Jc9o8ie8Bog+PeYvvSR8sDGoZxNFTvZ4dlxUB3WzQ3bQMztFrSRODGrLLj8g6OFuGY/aiQg==,
       }
     engines: { node: ^18.18.0 || ^20.9.0 || >=21.1.0 }
     hasBin: true
@@ -2140,10 +2140,10 @@ packages:
         integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==,
       }
 
-  tsx@4.20.4:
+  tsx@4.20.5:
     resolution:
       {
-        integrity: sha512-yyxBKfORQ7LuRt/BQKBXrpcq59ZvSW0XxwfjAt3w2/8PmdxaFzijtMhTawprSHhpzeM5BgU2hXHG3lklIERZXg==,
+        integrity: sha512-+wKjMNU9w/EaQayHXb7WA7ZaHY6hN8WgfvHNQ3t1PnU91/7O8TcTnIhCDYTZwnt8JsO9IBqZ30Ln1r7pPF52Aw==,
       }
     engines: { node: ">=18.0.0" }
     hasBin: true
@@ -2307,7 +2307,7 @@ snapshots:
       "@discordjs/formatters": 0.6.1
       "@discordjs/util": 1.1.1
       "@sapphire/shapeshift": 4.0.0
-      discord-api-types: 0.38.20
+      discord-api-types: 0.38.21
       fast-deep-equal: 3.1.3
       ts-mixer: 6.0.4
       tslib: 2.8.1
@@ -2318,16 +2318,16 @@ snapshots:
 
   "@discordjs/formatters@0.6.1":
     dependencies:
-      discord-api-types: 0.38.20
+      discord-api-types: 0.38.21
 
-  "@discordjs/rest@2.5.1":
+  "@discordjs/rest@2.6.0":
     dependencies:
       "@discordjs/collection": 2.1.1
       "@discordjs/util": 1.1.1
       "@sapphire/async-queue": 1.5.5
       "@sapphire/snowflake": 3.5.3
       "@vladfrangu/async_event_emitter": 2.4.6
-      discord-api-types: 0.38.20
+      discord-api-types: 0.38.21
       magic-bytes.js: 1.12.1
       tslib: 2.8.1
       undici: 6.21.3
@@ -2337,12 +2337,12 @@ snapshots:
   "@discordjs/ws@1.2.3":
     dependencies:
       "@discordjs/collection": 2.1.1
-      "@discordjs/rest": 2.5.1
+      "@discordjs/rest": 2.6.0
       "@discordjs/util": 1.1.1
       "@sapphire/async-queue": 1.5.5
       "@types/ws": 8.18.1
       "@vladfrangu/async_event_emitter": 2.4.6
-      discord-api-types: 0.38.20
+      discord-api-types: 0.38.21
       tslib: 2.8.1
       ws: 8.18.3
     transitivePeerDependencies:
@@ -2360,11 +2360,11 @@ snapshots:
 
   "@discordx/internal@1.1.5": {}
 
-  "@discordx/utilities@7.0.5(discord.js@14.21.0)(discordx@11.12.5(discord.js@14.21.0))":
+  "@discordx/utilities@7.0.5(discord.js@14.22.1)(discordx@11.12.6(discord.js@14.22.1))":
     dependencies:
       dayjs: 1.11.13
-      discord.js: 14.21.0
-      discordx: 11.12.5(discord.js@14.21.0)
+      discord.js: 14.22.1
+      discordx: 11.12.6(discord.js@14.22.1)
 
   "@drizzle-team/brocli@0.10.2": {}
 
@@ -2522,9 +2522,9 @@ snapshots:
   "@esbuild/win32-x64@0.25.9":
     optional: true
 
-  "@eslint-community/eslint-utils@4.7.0(eslint@9.33.0)":
+  "@eslint-community/eslint-utils@4.7.0(eslint@9.34.0)":
     dependencies:
-      eslint: 9.33.0
+      eslint: 9.34.0
       eslint-visitor-keys: 3.4.3
 
   "@eslint-community/regexpp@4.12.1": {}
@@ -2557,7 +2557,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  "@eslint/js@9.33.0": {}
+  "@eslint/js@9.34.0": {}
 
   "@eslint/object-schema@2.1.6": {}
 
@@ -2650,15 +2650,15 @@ snapshots:
     dependencies:
       "@types/node": 24.3.0
 
-  "@typescript-eslint/eslint-plugin@8.40.0(@typescript-eslint/parser@8.40.0(eslint@9.33.0)(typescript@5.9.2))(eslint@9.33.0)(typescript@5.9.2)":
+  "@typescript-eslint/eslint-plugin@8.40.0(@typescript-eslint/parser@8.40.0(eslint@9.34.0)(typescript@5.9.2))(eslint@9.34.0)(typescript@5.9.2)":
     dependencies:
       "@eslint-community/regexpp": 4.12.1
-      "@typescript-eslint/parser": 8.40.0(eslint@9.33.0)(typescript@5.9.2)
+      "@typescript-eslint/parser": 8.40.0(eslint@9.34.0)(typescript@5.9.2)
       "@typescript-eslint/scope-manager": 8.40.0
-      "@typescript-eslint/type-utils": 8.40.0(eslint@9.33.0)(typescript@5.9.2)
-      "@typescript-eslint/utils": 8.40.0(eslint@9.33.0)(typescript@5.9.2)
+      "@typescript-eslint/type-utils": 8.40.0(eslint@9.34.0)(typescript@5.9.2)
+      "@typescript-eslint/utils": 8.40.0(eslint@9.34.0)(typescript@5.9.2)
       "@typescript-eslint/visitor-keys": 8.40.0
-      eslint: 9.33.0
+      eslint: 9.34.0
       graphemer: 1.4.0
       ignore: 7.0.5
       natural-compare: 1.4.0
@@ -2667,14 +2667,14 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  "@typescript-eslint/parser@8.40.0(eslint@9.33.0)(typescript@5.9.2)":
+  "@typescript-eslint/parser@8.40.0(eslint@9.34.0)(typescript@5.9.2)":
     dependencies:
       "@typescript-eslint/scope-manager": 8.40.0
       "@typescript-eslint/types": 8.40.0
       "@typescript-eslint/typescript-estree": 8.40.0(typescript@5.9.2)
       "@typescript-eslint/visitor-keys": 8.40.0
       debug: 4.4.1
-      eslint: 9.33.0
+      eslint: 9.34.0
       typescript: 5.9.2
     transitivePeerDependencies:
       - supports-color
@@ -2697,13 +2697,13 @@ snapshots:
     dependencies:
       typescript: 5.9.2
 
-  "@typescript-eslint/type-utils@8.40.0(eslint@9.33.0)(typescript@5.9.2)":
+  "@typescript-eslint/type-utils@8.40.0(eslint@9.34.0)(typescript@5.9.2)":
     dependencies:
       "@typescript-eslint/types": 8.40.0
       "@typescript-eslint/typescript-estree": 8.40.0(typescript@5.9.2)
-      "@typescript-eslint/utils": 8.40.0(eslint@9.33.0)(typescript@5.9.2)
+      "@typescript-eslint/utils": 8.40.0(eslint@9.34.0)(typescript@5.9.2)
       debug: 4.4.1
-      eslint: 9.33.0
+      eslint: 9.34.0
       ts-api-utils: 2.1.0(typescript@5.9.2)
       typescript: 5.9.2
     transitivePeerDependencies:
@@ -2727,13 +2727,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  "@typescript-eslint/utils@8.40.0(eslint@9.33.0)(typescript@5.9.2)":
+  "@typescript-eslint/utils@8.40.0(eslint@9.34.0)(typescript@5.9.2)":
     dependencies:
-      "@eslint-community/eslint-utils": 4.7.0(eslint@9.33.0)
+      "@eslint-community/eslint-utils": 4.7.0(eslint@9.34.0)
       "@typescript-eslint/scope-manager": 8.40.0
       "@typescript-eslint/types": 8.40.0
       "@typescript-eslint/typescript-estree": 8.40.0(typescript@5.9.2)
-      eslint: 9.33.0
+      eslint: 9.34.0
       typescript: 5.9.2
     transitivePeerDependencies:
       - supports-color
@@ -2842,18 +2842,18 @@ snapshots:
 
   diff@4.0.2: {}
 
-  discord-api-types@0.38.20: {}
+  discord-api-types@0.38.21: {}
 
-  discord.js@14.21.0:
+  discord.js@14.22.1:
     dependencies:
       "@discordjs/builders": 1.11.3
       "@discordjs/collection": 1.5.3
       "@discordjs/formatters": 0.6.1
-      "@discordjs/rest": 2.5.1
+      "@discordjs/rest": 2.6.0
       "@discordjs/util": 1.1.1
       "@discordjs/ws": 1.2.3
       "@sapphire/snowflake": 3.5.3
-      discord-api-types: 0.38.20
+      discord-api-types: 0.38.21
       fast-deep-equal: 3.1.3
       lodash.snakecase: 4.1.1
       magic-bytes.js: 1.12.1
@@ -2863,11 +2863,11 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  discordx@11.12.5(discord.js@14.21.0):
+  discordx@11.12.6(discord.js@14.22.1):
     dependencies:
       "@discordx/di": 3.3.4
       "@discordx/internal": 1.1.5
-      discord.js: 14.21.0
+      discord.js: 14.22.1
       lodash: 4.17.21
 
   dotenv@17.2.1: {}
@@ -2957,9 +2957,9 @@ snapshots:
 
   escape-string-regexp@4.0.0: {}
 
-  eslint-config-prettier@10.1.8(eslint@9.33.0):
+  eslint-config-prettier@10.1.8(eslint@9.34.0):
     dependencies:
-      eslint: 9.33.0
+      eslint: 9.34.0
 
   eslint-scope@8.4.0:
     dependencies:
@@ -2970,15 +2970,15 @@ snapshots:
 
   eslint-visitor-keys@4.2.1: {}
 
-  eslint@9.33.0:
+  eslint@9.34.0:
     dependencies:
-      "@eslint-community/eslint-utils": 4.7.0(eslint@9.33.0)
+      "@eslint-community/eslint-utils": 4.7.0(eslint@9.34.0)
       "@eslint-community/regexpp": 4.12.1
       "@eslint/config-array": 0.21.0
       "@eslint/config-helpers": 0.3.1
       "@eslint/core": 0.15.2
       "@eslint/eslintrc": 3.3.1
-      "@eslint/js": 9.33.0
+      "@eslint/js": 9.34.0
       "@eslint/plugin-kit": 0.3.5
       "@humanfs/node": 0.16.6
       "@humanwhocodes/module-importer": 1.0.1
@@ -3385,7 +3385,7 @@ snapshots:
 
   tslib@2.8.1: {}
 
-  tsx@4.20.4:
+  tsx@4.20.5:
     dependencies:
       esbuild: 0.25.9
       get-tsconfig: 4.10.1
@@ -3402,13 +3402,13 @@ snapshots:
 
   typedi@0.10.0: {}
 
-  typescript-eslint@8.40.0(eslint@9.33.0)(typescript@5.9.2):
+  typescript-eslint@8.40.0(eslint@9.34.0)(typescript@5.9.2):
     dependencies:
-      "@typescript-eslint/eslint-plugin": 8.40.0(@typescript-eslint/parser@8.40.0(eslint@9.33.0)(typescript@5.9.2))(eslint@9.33.0)(typescript@5.9.2)
-      "@typescript-eslint/parser": 8.40.0(eslint@9.33.0)(typescript@5.9.2)
+      "@typescript-eslint/eslint-plugin": 8.40.0(@typescript-eslint/parser@8.40.0(eslint@9.34.0)(typescript@5.9.2))(eslint@9.34.0)(typescript@5.9.2)
+      "@typescript-eslint/parser": 8.40.0(eslint@9.34.0)(typescript@5.9.2)
       "@typescript-eslint/typescript-estree": 8.40.0(typescript@5.9.2)
-      "@typescript-eslint/utils": 8.40.0(eslint@9.33.0)(typescript@5.9.2)
-      eslint: 9.33.0
+      "@typescript-eslint/utils": 8.40.0(eslint@9.34.0)(typescript@5.9.2)
+      eslint: 9.34.0
       typescript: 5.9.2
     transitivePeerDependencies:
       - supports-color
