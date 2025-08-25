@@ -27,7 +27,6 @@ export default class InfoCommand {
 	if (!member) member = await interaction.guild?.members.fetch(interaction?.user.id);
 	if (member instanceof GuildMember)
 	    interaction.reply(`### Informações de ${member.user.username}\n\`ID\`: ${member?.id}\n\n\`Entrou em\`:\n${member?.joinedAt?.toLocaleDateString("pt-br")}\n\`Criou em\`:\n${member?.user.createdAt.toLocaleDateString("pt-br")}\n`);
-	    
 	
     }
 }

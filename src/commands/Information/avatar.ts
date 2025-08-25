@@ -1,6 +1,7 @@
 import { Discord, Slash, SlashOption } from "discordx";
 import { Category } from "@discordx/utilities";
 import {
+    APIInteractionGuildMember,
     ApplicationCommandOptionType,
     CommandInteraction,
     GuildMember,
@@ -20,14 +21,11 @@ export default class AvatarCommand {
             required: false,
             type: ApplicationCommandOptionType.Mentionable,
         })
-        member: GuildMember | null,
+        member: GuildMember | APIInteractionGuildMember | undefined,
         interaction: CommandInteraction,
     ): Promise<void> {
-        if (!member)
-            interaction.reply(`Seu avatar\n${interaction.user.avatarURL()}`);
-        else
-            interaction.reply(
-                `Avatar de ${member}\n${member.user.avatarURL()}`,
-            );
+	if (!member) member = await interaction.guild?.members.fetch(interaction?.user.id);
+	if (member instanceof GuildMember)
+	    interaction.reply(`${member?.avatarURL()}`);
     }
 }
