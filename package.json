@@ -12,6 +12,7 @@
     "start": "node dist/index.js",
     "build": "npm run build:clean && npm run build:compile",
     "build:start": "npm run build && npm run start",
+    "build:start:nodb": "npm run build ; npm run start",
     "build:clean": "rimraf dist/",
     "build:compile": "tsc",
     "watch": "tsx --watch ./src/"
