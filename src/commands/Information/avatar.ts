@@ -24,10 +24,13 @@ export default class AvatarCommand {
         member: GuildMember | APIInteractionGuildMember | undefined,
         interaction: CommandInteraction,
     ): Promise<void> {
-	if (!member) member ??= await interaction.guild?.members.fetch(interaction?.user.id);
-	if (member instanceof GuildMember)
-            interaction.reply(`Avatar de ${member}\n${member?.user.avatarURL()}`);
-
+        if (!member)
+            member ??= await interaction.guild?.members.fetch(
+                interaction?.user.id,
+            );
+        if (member instanceof GuildMember)
+            interaction.reply(
+                `Avatar de ${member}\n${member?.user.avatarURL()}`,
+            );
     }
-    
 }
