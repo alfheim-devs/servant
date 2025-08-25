@@ -24,7 +24,7 @@ export class Database {
     }
 
     async createUser(userId: string) {
-        let newUser: User = {
+        const newUser: User = {
             id: userId,
             xp: 0,
             bumps: 0,
