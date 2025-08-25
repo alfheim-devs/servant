@@ -26,6 +26,8 @@ export default class AvatarCommand {
     ): Promise<void> {
 	if (!member) member = await interaction.guild?.members.fetch(interaction?.user.id);
 	if (member instanceof GuildMember)
-	    interaction.reply(`${member?.avatarURL()}`);
+            interaction.reply(`Avatar de ${member}\n${member?.user.avatarURL()}`);
+
     }
+    
 }
