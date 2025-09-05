@@ -11,7 +11,7 @@ export default class TestCommand {
     })
     async test(interaction: CommandInteraction): Promise<void> {
         await interaction.reply({
-            content: `This is a test, ${interaction.member}!`,
+            content: `This is a test!`,
         });
     }
 }
