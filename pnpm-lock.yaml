@@ -46,8 +46,8 @@ importers:
         specifier: ^9.2.1
         version: 9.2.1
       dotenv:
-        specifier: ^17.2.1
-        version: 17.2.1
+        specifier: ^17.2.2
+        version: 17.2.2
       drizzle-kit:
         specifier: ^0.31.4
         version: 0.31.4
@@ -758,8 +758,8 @@ packages:
     peerDependencies:
       discord.js: '>=14 || ^14.0.0-dev'
 
-  dotenv@17.2.1:
-    resolution: {integrity: sha512-kQhDYKZecqnM0fCnzI5eIv5L4cAe/iRI+HqMbO/hbRdTAeXDG+M9FjipUxNfbARuEg4iHIbhnhs78BCHNbSxEQ==}
+  dotenv@17.2.2:
+    resolution: {integrity: sha512-Sf2LSQP+bOlhKWWyhFsn0UsfdK/kCWRv1iuA2gXAwt3dyNabr6QSj00I2V10pidqz69soatm9ZwZvpQMTIOd5Q==}
     engines: {node: '>=12'}
 
   drizzle-kit@0.31.4:
@@ -2025,7 +2025,7 @@ snapshots:
       discord.js: 14.22.1
       lodash: 4.17.21
 
-  dotenv@17.2.1: {}
+  dotenv@17.2.2: {}
 
   drizzle-kit@0.31.4:
     dependencies:
