@@ -5,3 +5,6 @@ export const usersTable = pgTable("users", {
     xp: integer().notNull(),
     bumps: integer().notNull(),
 });
+
+export type User = typeof usersTable.$inferSelect;
+export type NewUser = typeof usersTable.$inferInsert;

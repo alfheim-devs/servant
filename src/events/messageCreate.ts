@@ -1,16 +1,16 @@
 import { type ArgsOf, Client, Discord, On } from "discordx";
 import { container } from "tsyringe";
 import { Bump } from "../services/Bump.js";
-import { Database } from "../services/Database.js";
+import { UsersRepository } from "../repositories/UsersRepository.js";
 
 @Discord()
 export default class MessageCreateEvent {
-    bumpService: Bump;
-    database: Database;
+    protected bumpService: Bump;
+    protected usersRepository: UsersRepository;
 
     constructor() {
         this.bumpService = container.resolve(Bump);
-        this.database = container.resolve(Database);
+        this.usersRepository = container.resolve(UsersRepository);
     }
 
     @On({ event: "messageCreate" })
