@@ -1,6 +1,6 @@
-import { inject, singleton } from "tsyringe";
-import { Database } from "./Database.js";
-import { Embed, Message, TextChannel } from "discord.js";
+import { container, singleton } from "tsyringe";
+import { Embed, Message } from "discord.js";
+import { UsersRepository } from "../repositories/UsersRepository.js";
 
 const DISBOARD_BOT_ID = process.env.DISBOARD_BOT_ID || "";
 const BUMP_ROLE_ID = process.env.BUMP_ROLE_ID || "";
@@ -8,8 +8,10 @@ const TWO_HOURS = 120 * 60 * 1000;
 
 @singleton()
 export class Bump {
-    constructor(@inject(Database) private database: Database) {
-        this.database.check();
+    protected usersRepository: UsersRepository;
+
+    constructor() {
+        this.usersRepository = container.resolve(UsersRepository);
         console.log("Bump Service loaded!");
     }
 
@@ -27,24 +29,36 @@ export class Bump {
     async handleMessageCreate(message: Message): Promise<void> {
         if (this.bumpHasSucceeded(message.author.id, message.embeds[0])) {
             const userId = message.interactionMetadata?.user.id || "";
-            const user = await this.database.getUserOrCreateOne(userId);
             const channel = message.channel;
 
-            if (user && channel instanceof TextChannel) {
-                const bumps = user?.bumps + 1;
-                void this.database.incrementUserBump(userId, bumps);
-                await message.react("👍");
+            if (!channel.isSendable()) return;
 
-                await channel.send(
-                    `<@${user.id}>, você acabou de dar bump! Agora você tem ${bumps} bumps!`,
-                );
+            const user = (
+                await this.usersRepository.getOrCreate({
+                    id: userId,
+                    bumps: 0,
+                    xp: 0,
+                })
+            )[0];
 
-                await this.timeout(TWO_HOURS);
+            if (!user) return;
 
-                await channel.send(
-                    `<@&${BUMP_ROLE_ID}>, o bump está pronto! Use o comando </bump:947088344167366698>`,
-                );
-            }
+            const result = await this.usersRepository.incrementBumps(user);
+
+            if (!result[0]) return;
+
+            const bumps = result[0].bumps;
+            await message.react("👍");
+
+            await channel.send(
+                `<@${user.id}>, você acabou de dar bump! Agora você tem ${bumps} bumps!`,
+            );
+
+            await this.timeout(TWO_HOURS);
+
+            await channel.send(
+                `<@&${BUMP_ROLE_ID}>, o bump está pronto! Use o comando </bump:947088344167366698>`,
+            );
         }
     }
 

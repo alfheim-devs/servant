@@ -2,7 +2,8 @@ import { Category } from "@discordx/utilities";
 import { CommandInteraction, MessageFlags } from "discord.js";
 import { Discord, Slash, SlashGroup } from "discordx";
 import { container } from "tsyringe";
-import { Database, User } from "../../services/Database.js";
+import { UsersRepository } from "../../repositories/UsersRepository.js";
+import { User } from "../../db/schema.js";
 
 @Discord()
 @Category("Information")
@@ -14,12 +15,13 @@ export default class RankCommand {
         description: "Ranking de bumps",
     })
     async bumps(interaction: CommandInteraction): Promise<void> {
-        const database = container.resolve(Database);
-        const users = await database.getTop10BumpUsers();
-        const response = this.buildBumpsRanking(users);
+        const usersRepository = container.resolve(UsersRepository);
+        const users = await usersRepository.getTop10Bumps();
+
+        if (!users) return;
 
         await interaction.reply({
-            content: response,
+            content: this.buildBumpsRanking(users),
             flags: MessageFlags.Ephemeral,
         });
     }
