@@ -4,11 +4,10 @@ import {
     ApplicationCommandOptionType,
     CommandInteraction,
     GuildMember,
-    TextChannel,
 } from "discord.js";
 import { Discord, Slash, SlashOption } from "discordx";
 import { container } from "tsyringe";
-import { Database } from "../../services/Database.js";
+import { UsersRepository } from "../../repositories/UsersRepository.js";
 
 @Discord()
 @Category("Bumping")
@@ -32,17 +31,23 @@ export default class BumpsCommand {
         member ??= interaction.member;
         const channel = interaction.channel;
 
-        if (channel instanceof TextChannel) {
-            const database = container.resolve(Database);
-            const result = await database.getUserOrCreateOne(
-                member?.user.id || "",
-            );
+        if (!member) return;
+        if (!channel?.isSendable()) return;
 
-            await interaction.reply(
-                result
-                    ? `O usuário \`${member?.user.username}\` tem ${result?.bumps} bumps!`
-                    : "Falha ao obter dados do usuário!",
-            );
-        }
+        const usersRepository = container.resolve(UsersRepository);
+
+        const user = (
+            await usersRepository.getOrCreate({
+                id: member.user.id,
+                bumps: 0,
+                xp: 0,
+            })
+        )[0];
+
+        await interaction.reply(
+            user
+                ? `O usuário \`${member.user.username}\` tem ${user.bumps} bumps!`
+                : `Falha ao obter dados do usuário!`,
+        );
     }
 }
