@@ -26,7 +26,7 @@
   "license": "Apache-2.0",
   "packageManager": "pnpm@10.14.0",
   "devDependencies": {
-    "@discordx/utilities": "^7.0.5",
+    "@discordx/utilities": "^8.0.0",
     "@eslint/js": "^9.36.0",
     "@types/node": "^24.5.0",
     "@types/pg": "^8.15.5",

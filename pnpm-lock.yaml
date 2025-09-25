@@ -25,8 +25,8 @@ importers:
         version: 8.16.3
     devDependencies:
       '@discordx/utilities':
-        specifier: ^7.0.5
-        version: 7.0.5(discord.js@14.22.1)(discordx@11.13.2(discord.js@14.22.1))
+        specifier: ^8.0.0
+        version: 8.0.0(discord.js@14.22.1)(discordx@11.13.2(discord.js@14.22.1))
       '@eslint/js':
         specifier: ^9.36.0
         version: 9.36.0
@@ -127,8 +127,8 @@ packages:
     resolution: {integrity: sha512-UVWR3ZmIlLti9O45Xft2aVQ3fiI420hrC14oInDoirCjgYCyVyOGEITyCnTfCf/O1tILYpWi3PD6Bp2gmsT+jQ==}
     engines: {node: '>=16.0.0', npm: '>=7.0.0'}
 
-  '@discordx/utilities@7.0.5':
-    resolution: {integrity: sha512-YsWpuruGyCXWKWDYlM6xBxUkXILDPSc4I9zLtg0b5sNTe+wu9tzVIF5bG62e3KjjRvLuNFss4cNkjxO5YcorLA==}
+  '@discordx/utilities@8.0.0':
+    resolution: {integrity: sha512-rWqwwmSphvzgXmi4ehLgIpZXYfPvbSZLFF7zg/v6VG1UQyGXWjOeb1nf5hCTZmWZl/rJNasuQsHs5zFa9B3B5A==}
     engines: {node: '>=16.0.0', npm: '>=7.0.0'}
     peerDependencies:
       discord.js: '>=14 || ^14.0.0-dev'
@@ -753,8 +753,8 @@ packages:
     resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
     engines: {node: '>= 8'}
 
-  dayjs@1.11.13:
-    resolution: {integrity: sha512-oaMBel6gjolK862uaPQOVTA7q3TZhuSvuMQAAglQDOWYO9A91IrAOUJEyKVlqJlHE0vq5p5UXxzdPfMH/x6xNg==}
+  dayjs@1.11.18:
+    resolution: {integrity: sha512-zFBQ7WFRvVRhKcWoUh+ZA1g2HVgUbsZm9sbddh8EC5iv93sui8DVVz1Npvz+r6meo9VKfa8NyLWBsQK1VvIKPA==}
 
   debug@4.4.3:
     resolution: {integrity: sha512-RGwwWnwQvkVfavKVt22FGLw+xYSdzARwm0ru6DhTVA3umU5hZc28V3kO4stgYryrTlLpuvgI9GiijltAjNbcqA==}
@@ -1536,9 +1536,9 @@ snapshots:
 
   '@discordx/internal@1.2.0': {}
 
-  '@discordx/utilities@7.0.5(discord.js@14.22.1)(discordx@11.13.2(discord.js@14.22.1))':
+  '@discordx/utilities@8.0.0(discord.js@14.22.1)(discordx@11.13.2(discord.js@14.22.1))':
     dependencies:
-      dayjs: 1.11.13
+      dayjs: 1.11.18
       discord.js: 14.22.1
       discordx: 11.13.2(discord.js@14.22.1)
 
@@ -2077,7 +2077,7 @@ snapshots:
       shebang-command: 2.0.0
       which: 2.0.2
 
-  dayjs@1.11.13: {}
+  dayjs@1.11.18: {}
 
   debug@4.4.3:
     dependencies:
