@@ -11,8 +11,6 @@
     npm.enable = true;
     pnpm.enable = true;
   };
-
-  services.postgres.enable = true;
   
   git-hooks.hooks = {
     eslint.enable = true;

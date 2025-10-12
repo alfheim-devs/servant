@@ -1,9 +1,9 @@
-import { pgTable, text, integer } from "drizzle-orm/pg-core";
+import { sqliteTable, text, int } from "drizzle-orm/sqlite-core";
 
-export const usersTable = pgTable("users", {
+export const usersTable = sqliteTable("users", {
     id: text().primaryKey().unique(),
-    xp: integer().notNull(),
-    bumps: integer().notNull(),
+    xp: int().notNull(),
+    bumps: int().notNull(),
 });
 
 export type User = typeof usersTable.$inferSelect;

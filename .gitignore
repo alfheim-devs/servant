@@ -151,3 +151,5 @@ devenv.local.nix
 # Drizzle
 drizzle.config.js
 drizzle.config.js.map
+
+*.db
