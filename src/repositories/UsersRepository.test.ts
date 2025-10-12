@@ -53,4 +53,18 @@ describe("create user and find by id", () => {
         const results = await repo.findById(user.id);
         assert.deepEqual(results[0], user);
     });
+
+    it("create already existing user", async () => {
+        const repo: UsersRepository = container.resolve(UsersRepository);
+
+        assert.rejects(async () => {
+            await repo.create(user);
+        });
+    });
+
+    it("find unexisting user", async () => {
+        const repo: UsersRepository = container.resolve(UsersRepository);
+        const results = await repo.findById("1234");
+        assert.deepStrictEqual(results, []);
+    });
 });
