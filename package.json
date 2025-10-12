@@ -16,7 +16,8 @@
     "build:clean": "rimraf dist/",
     "build:compile": "tsc",
     "watch": "NODE_ENV=development tsx --watch ./src/",
-    "test": "NODE_ENV=test tsx --test"
+    "test": "NODE_ENV=test tsx --test",
+    "test:coverage": "NODE_ENV=test tsx --experimental-test-coverage --test"
   },
   "keywords": [
     "bot",
